@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+    background: #212529;
+    color: white;
+    overflow-x: hidden;
+}
+
+.sidebar.collapsed {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sidebar .nav-link {
+    padding: 10px;
+    font-size: 1.2rem;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.sidebar .nav-link:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Content Area Adjustment */
+#content {
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+#content.expanded {
+    margin-left: 0;
+    width: 100%;
+}

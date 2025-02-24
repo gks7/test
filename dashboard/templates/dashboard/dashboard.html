@@ -1,0 +1,8 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Home - Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Hi {{ user.username|capfirst }}, welcome to Your Dashboard</h2>
+    <p>Manage your payments efficiently.</p>
+{% endblock %}
